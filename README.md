@@ -1,4 +1,6 @@
-# inherited constraint
+# The Inherited Constraint
+
+**Paper 6** — Biological Throughput Limits Shape the Information Structure of Human Language and, Through It, AI
 
 **Website:** https://windstorminstitute.org
 
