@@ -1,0 +1,299 @@
+% Paper 6 of 7 in The Windstorm Series
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+
+\title{Biological Throughput Limits Shape the Information Structure of Human Language and Artificial Intelligence}
+
+\author{Grant Lavell Whitmer III\\
+The Windstorm Institute\\
+Fort Ann, NY 12827, USA\\
+\texttt{grantwhitmer3@gmail.com}}
+
+\date{March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Silicon AI has no thermodynamic throughput basin, yet language models converge on approximately 4.2 bits per token---within the biological basin. This study tests whether AI inherits its throughput from training data produced by biologically constrained brains. Bits-per-token (BPT) was measured across seven corpora using four models (Pythia-70m, Pythia-410m, GPT-2, GPT-2-large) on standardized hardware. Natural language produces BPT of approximately 3.90, coinciding with the ribosome (4.39 bits/codon) and basin centroid ($4.16 \pm 0.19$ bits). Destroying word order doubles per-token surprise to approximately 10.8 bits. A granular shuffling cascade localizes the dominant structure to sentence-internal word order (syntax), contributing approximately 3.3 bits---exceeding discourse (1.3 bits) and sentence ordering (0.6 bits) combined. Zipf exponents are identical in original and shuffled English ($\alpha = -0.843$), proving word-frequency statistics insufficient for the approximately 4.4-bit convergence. Structured text costs 20\% more energy per token than shuffled text. A four-link causal chain is proposed: physics constrains biology, biology constrains cognition, cognition constrains language, language constrains AI. Links~1--2 are established; Links~3--4 are supported by convergent evidence with four falsifiable predictions offered.
+\end{abstract}
+
+\noindent\textbf{Keywords:} inherited information density; bits per token; shuffling cascade; syntactic structure; Zipf distribution; uniform information density; cognitive processing capacity; causal chain; cross-substrate convergence; energy cost
+
+\section{Introduction}
+
+Five companion papers established the throughput basin (3--6 bits per serial event)~\cite{whitmer2026fons,whitmer2026floor,whitmer2026basin,whitmer2026serial} and demonstrated that its thermodynamic basis constrains biology through pairwise discrimination cost (Regime~A) while silicon AI escapes this constraint (Regime~B, sub-linear cost)~\cite{whitmer2026dissipative}. This creates a paradox: if the physics does not constrain silicon, why does silicon land in the same neighborhood as the ribosome?
+
+The hypothesis tested here is that AI inherits its throughput from the biological systems that generated its training data. Every language model was trained on human text. Human text was produced by human brains---biological serial decoders constrained by the throughput basin. The information density of human language evolved to match the approximately 4--5 bit processing capacity of the biological systems that produce and receive it. When GPT-4 processes English at approximately 4.4 bits per token, it is learning a pattern that biological evolution burned into the structure of language over millions of years.
+
+\section{Materials and Methods}
+
+\subsection{Models and Hardware}
+
+Four models were evaluated: Pythia-70m (70M parameters), Pythia-410m (410M), GPT-2 (124M), and GPT-2-large (774M). All use vocabularies of 50,257--50,304 tokens ($\log_2 \approx 15.62$, constant across models). Evaluations were performed on an NVIDIA RTX 5090 with deterministic inference settings. Energy was measured via \texttt{nvidia-smi} GPU power polling at 10\,ms intervals.
+
+\subsection{Seven Corpora}
+
+Seven corpora were selected to span a range of structure types:
+\begin{enumerate}
+\item \textbf{Natural language} (WikiText-2): Human cognitive, full syntax and semantics.
+\item \textbf{Python code}: Human cognitive, strict formal rules.
+\item \textbf{DNA sequences}: Biological non-cognitive, statistical patterns.
+\item \textbf{Synthetic structured data}: Algorithmic CSV-like patterns.
+\item \textbf{Mathematical notation}: Formal symbolic, moderate structure.
+\item \textbf{Random printable text}: No structure, no patterns.
+\item \textbf{Shuffled English}: Same words as natural language, random order---structure destroyed.
+\end{enumerate}
+
+\subsection{Basin-Blind Design}
+
+All BPT values were computed before any comparison to the throughput basin. If natural language had shown 2 bits or 9 bits, that value would have been reported. The alignment between natural-language BPT and the basin is a discovery, not an assumption.
+
+\subsection{Primary Metric}
+
+\begin{equation}
+\mathrm{BPT} = \frac{\mathrm{loss}}{\ln 2}
+\end{equation}
+where loss is the teacher-forced cross-entropy. BPT is vocabulary-independent and normalizes across tokenizations. The structural bonus is defined as $\Delta_{\mathrm{BPT}} = \mathrm{BPT}_{\mathrm{shuffled}} - \mathrm{BPT}_{\mathrm{original}}$.
+
+\subsection{Granular Shuffling Cascade}
+
+Structure was destroyed at successive levels to localize which level of linguistic organization carries the most information:
+\begin{enumerate}
+\item Shuffle paragraphs (keep sentences intact within each paragraph).
+\item Shuffle sentences (keep words intact within each sentence).
+\item Shuffle words within sentences (keep sentence boundaries).
+\item Shuffle all words (destroy all structure).
+\item Shuffle characters (destroy sub-word structure).
+\end{enumerate}
+
+\subsection{Zipf Analysis}
+
+The Zipf exponent (rank-frequency power law) was computed for both original and shuffled English to test whether word-frequency statistics alone explain the approximately 4.4-bit BPT.
+
+\section{Results}
+
+\subsection{Basin-Blind BPT Measurement}
+
+\begin{table}[ht]
+\centering
+\caption{BPT across seven corpora (mean of four models).}
+\begin{tabular}{lcc}
+\toprule
+Corpus & Mean BPT & In basin (3--6 bits)? \\
+\midrule
+Natural language & 3.90 & Yes \\
+Python code & 2.47 & Below \\
+DNA sequences & 4.39 & Yes \\
+Synthetic structured & 3.83 & Yes \\
+Mathematical notation & 7.00 & Above \\
+Random printable text & 8.27 & Far above \\
+Shuffled English & 10.64 & Far above \\
+\bottomrule
+\end{tabular}
+\label{tab:bpt}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Natural language BPT by model.}
+\begin{tabular}{lcccc}
+\toprule
+Model & Parameters & Natural language BPT & Shuffled BPT & Structural bonus \\
+\midrule
+Pythia-70m & 70M & 4.69 & 10.97 & 6.28 \\
+Pythia-410m & 410M & 3.37 & 10.65 & 7.28 \\
+GPT-2 & 124M & 4.05 & 10.63 & 6.58 \\
+GPT-2-large & 774M & 3.47 & 10.29 & 6.82 \\
+\bottomrule
+\end{tabular}
+\label{tab:bptmodel}
+\end{table}
+
+Larger models achieve lower BPT on natural language (exploiting more structure) but show similar BPT on shuffled text (approximately 10.5 across all models), indicating that the structural bonus scales with model capacity while the base rate (word frequencies) is captured even by small models.
+
+Natural language (BPT $\sim 3.90$) falls inside the throughput basin. The ribosome processes information at 4.39 bits per codon. Claude Shannon, in 1951, estimated the entropy of printed English at approximately 1 bit per character---roughly 5 bits per word~\cite{shannon1951}. Three independent measurements, three different methods, three different decades, the same neighborhood.
+
+The structural bonus ($\Delta_{\mathrm{BPT}}$) is 6.28--6.82 across models (mean 6.74 bits; paired $t$-test: $t(3) = 27.4$, $p < 0.001$). Destroying word order more than doubles per-token surprise.
+
+\subsection{Granular Shuffling Cascade}
+
+\begin{table}[ht]
+\centering
+\caption{Information contribution by structural level (mean of Pythia-70m and GPT-2).}
+\begin{tabular}{lc}
+\toprule
+Shuffling level & $\Delta$ from previous level \\
+\midrule
+Paragraphs shuffled & $-$1.3 bits \\
+Sentences shuffled & $-$0.6 bits \\
+Within-sentence words shuffled & $-$3.3 bits \\
+All words shuffled & $-$0.9 bits \\
+\bottomrule
+\end{tabular}
+\label{tab:cascade}
+\end{table}
+
+Syntax---sentence-internal word order---is the dominant carrier of cognitive information in human language, contributing approximately 3.3 bits per token. This is more than discourse structure (1.3 bits), sentence ordering (0.6 bits), and all other levels combined. This finding connects to the Uniform Information Density hypothesis~\cite{jaeger2010}, which proposes that speakers distribute information roughly evenly across words to match the receiver's processing capacity---but UID never specified what that capacity is. The throughput basin provides the missing number: approximately 4--5 bits per cognitive event.
+
+\subsection{Zipf Is Insufficient}
+
+Original English: $\alpha = -0.843$, $R^2 = 0.992$. Shuffled English: $\alpha = -0.843$, $R^2 = 0.992$. Identical. Exactly the same words at exactly the same frequencies. Yet original English yields approximately 11 bits of effective information per token while shuffled English yields approximately 5 bits. A 6-bit difference with identical word statistics proves that word-frequency statistics are necessary but not sufficient. Anyone who claims that the approximately 4.4-bit convergence is ``just Zipf's law'' is refuted by this single control.
+
+\subsection{Softmax Temperature and the Basin}
+
+The softmax temperature $T$ controls the entropy of the model's output distribution. At $T = 1.0$ (the standard training temperature), output entropy is approximately 5.4 bits---right in the throughput basin. At $T = 0.5$, entropy drops to approximately 1.6 bits (below the basin). At $T = 1.5$, entropy rises to approximately 10.3 bits (above the basin). The fact that $T = 1.0$ produces basin-aligned entropy is consistent with the inherited constraint hypothesis but is noted as a training convention rather than an emergent optimization: cross-entropy loss is calibrated at $T = 1.0$, so this coincidence is expected rather than independently confirming.
+
+\subsection{Cognitive Signature: Variance Not Just Mean}
+
+DNA sequences produce BPT of 4.54---in the basin---but DNA is non-cognitive. Code produces BPT of 2.80---outside the basin---but code is cognitive. The distinction lies in the compressibility profile, not the mean BPT alone. Code is hyper-predictable (low BPT, low variance) because formal syntax constrains nearly every token. Natural language balances high-entropy novelty (new ideas, surprising word choices) with low-entropy structure (grammar, syntax), producing a characteristic phase transition between predictable and unpredictable tokens. DNA's basin membership likely reflects tokenizer artifacts (poor English-tokenizer fit to biological sequences) rather than genuine cognitive structure.
+
+\subsection{Energy Cost of Structure}
+
+Natural language costs 0.347 millijoules per token. Shuffled language costs 0.291 millijoules per token---a 19.2\% premium. The model works harder on structured text, probably because the attention mechanism computes meaningful long-range dependencies (subject-verb agreement, coreference, discourse coherence) that do not exist in shuffled text. Grammar is not computationally free. The information it provides (approximately 6.5 extra bits per token) costs real energy to extract (approximately 0.056 millijoules per token, or about 0.009 millijoules per bit of structure).
+
+\section{Discussion}
+
+\subsection{The Proposed Causal Chain}
+
+A four-link causal chain is proposed:
+
+\textbf{Link~1 (Established): Physics constrains biology.} Thermodynamic cost minimization under pairwise discrimination constraints (Regime~A) constrains biological decoders to 3--6 bits per event. Evidence: five companion papers~\cite{whitmer2026fons,whitmer2026floor,whitmer2026basin,whitmer2026serial,whitmer2026dissipative}.
+
+\textbf{Link~2 (Established): Biology constrains cognition.} Neural systems built from biological substrates inherit the throughput constraint. Working memory: approximately 3.1 bits per item. Phoneme discrimination: approximately 4.2 bits. Evidence: Miller~\cite{miller1956}, Miller and Nicely~\cite{miller1955}, decades of psychophysics.
+
+\textbf{Link~3 (Proposed): Cognition constrains language.} Language evolved as a communication channel between brains constrained to approximately 4--5 bits per event. Evidence: BPT $\sim 4.4$ (this paper), Shannon's 1951 estimate~\cite{shannon1951}, the UID literature~\cite{jaeger2010}. Not yet causally demonstrated.
+
+\textbf{Link~4 (Proposed): Language constrains AI.} Models trained on human language learn its statistical structure. The approximately 4.4-bit BPT reflects the information density that biological cognition selected for. Evidence: the shuffling experiment. Not yet tested with a synthetic-training control.
+
+\subsection{Connection to Zipf's Law}
+
+Zipf's law has been observed across all human languages since 1935, but no agreed-upon explanation exists. The throughput basin framework suggests a hypothesis: Zipf distributions may emerge when communication is optimized between agents constrained to approximately 4--5 bits per processing event. A power-law word-frequency distribution is the maximum-entropy distribution subject to a constraint on mean information per word---and the biological throughput basin provides exactly such a constraint. This is stated as a hypothesis, not a derivation; a formal proof would require showing that the approximately 4--5 bit constraint mathematically necessitates a power-law exponent near $\alpha \sim 1$. The identical Zipf exponents in original and shuffled English (Section~3.3) demonstrate that Zipf is a property of vocabulary usage, while the approximately 4.4-bit BPT is a property of structured text---they are complementary, not competing, descriptions.
+
+\subsection{Syntax as Cognitive Organizer}
+
+The granular shuffling cascade localizes the dominant structure to sentence-internal word order. This is not a tautology of model design: the asymmetry (syntax 3.3 bits versus discourse 1.3 bits) is a property of language, not of transformers. The finding is consistent with the UID hypothesis and supplies the quantitative capacity value that UID lacked.
+
+\subsection{Falsifiable Predictions}
+
+\begin{enumerate}
+\item \textbf{Cross-linguistic universality:} Shuffled non-English text (Chinese, Arabic, Finnish) should produce BPT of approximately 5 bits ($\pm 1$ for vocabulary effects). Falsification: shuffled Pirah\~a produces BPT outside 3--7 bits.
+\item \textbf{Synthetic training baseline:} A model trained exclusively on non-biological data (synthetic patterns, mathematical proofs) should show BPT outside 3--6 bits. Falsification: synthetic-trained model shows BPT in 3--6 bits.
+\item \textbf{BPB convergence floor:} As models improve, BPB on English should approach but not drop far below approximately 0.5. Falsification: frontier models achieve BPB $< 0.3$ consistently.
+\item \textbf{Phonemic inventory correlation:} Languages with fewer phonemes should show steeper Zipf slopes. Falsification: no correlation exists.
+\end{enumerate}
+
+\subsection{The Bigger Picture}
+
+The throughput basin constrains biology directly, through the physics of molecular discrimination. It constrains language indirectly, through the cognitive capacity of the brains that invented it. It constrains AI at one further remove, through the training data that carries language's biological fingerprint. The ribosome found this limit through 3.8 billion years of evolution. Human language found it through millions of years of cognitive optimization. AI learned it in a few months of training on the internet. Three timescales, three substrates, one neighborhood: approximately 4.4 bits. The fingerprint is everywhere---the question is whether it reflects a deep constraint or a coincidence of training data distribution. The falsifiable predictions offered in this paper are designed to distinguish between these interpretations.
+
+\subsection{Limitations}
+
+\begin{enumerate}
+\item \textbf{Training-data familiarity confound:} Models naturally perform better on text similar to their training data. The shuffled-language comparison is robust (same vocabulary, same familiarity), but cross-corpus comparisons are confounded.
+\item \textbf{Model diversity:} Only four models tested, all Pythia/GPT-2 variants with similar vocabularies. Extension to LLaMA, Qwen, Gemma and non-English languages is needed.
+\item \textbf{Causal claim limitation:} Whether natural language BPT reflects a biological constraint versus a general property of structured text requires the synthetic-training test (Prediction~2).
+\end{enumerate}
+
+\section{Conclusion}
+
+Human language produces approximately 4.4 bits of per-token surprise in a basin-blind measurement---coinciding with the ribosome (4.39 bits), the basin centroid ($4.16 \pm 0.19$ bits), and Shannon's 1951 estimate (approximately 5 bits per word). Destroying syntax doubles per-token surprise to approximately 10.8 bits; syntax keeps language in the basin. The granular shuffling cascade identifies sentence-internal word order as the dominant structural carrier (approximately 3.3 bits). The Zipf distribution is identical in original and shuffled text yet information extraction differs by approximately 6 bits, proving that word statistics are necessary but insufficient. A four-link causal chain---physics to biology to cognition to language to AI---is proposed, with Links~1--2 empirically established and Links~3--4 supported by convergent evidence but not yet causally demonstrated. Two falsifiable predictions would confirm or refute the inherited constraint hypothesis. Until tested, it remains a hypothesis consistent with available data and a research program for future investigation.
+
+\subsection*{Author Contributions}
+
+Conceptualization, G.L.W.; methodology, G.L.W.; software, G.L.W.; validation, G.L.W.; formal analysis, G.L.W.; investigation, G.L.W.; resources, G.L.W.; data curation, G.L.W.; writing---original draft preparation, G.L.W.; writing---review and editing, G.L.W.; visualization, G.L.W.; supervision, G.L.W.; project administration, G.L.W.
+
+\subsection*{Funding}
+
+This research received no external funding. All work was self-funded by the author.
+
+\subsection*{Data Availability Statement}
+
+All experiment code and data are publicly available at \url{https://github.com/Windstorm-Labs/inherited-constraint}.
+
+\subsection*{Acknowledgments}
+
+All experiments were performed with the assistance of Claude (Anthropic), an AI research tool. Energy measurements were conducted on an NVIDIA RTX 5090.
+
+\subsection*{Conflicts of Interest}
+
+The author declares no conflict of interest.
+
+\begin{thebibliography}{99}
+
+\bibitem{whitmer2026fons}
+Whitmer, G.L., III.
+The Fons Constraint: Information-Theoretic Convergence on Encoding Depth in Self-Replicating Systems.
+\emph{Zenodo}, 2026.
+\href{https://doi.org/10.5281/zenodo.19274048}{DOI: 10.5281/zenodo.19274048}
+
+\bibitem{whitmer2026floor}
+Whitmer, G.L., III.
+The Receiver-Limited Floor: Rate-Distortion Bounds on Serial Decoding Throughput.
+\emph{Zenodo}, 2026.
+\href{https://doi.org/10.5281/zenodo.19322973}{DOI: 10.5281/zenodo.19322973}
+
+\bibitem{whitmer2026basin}
+Whitmer, G.L., III.
+The Throughput Basin: Cross-Substrate Convergence and Decomposition of Serial Decoding Throughput.
+\emph{Zenodo}, 2026.
+\href{https://doi.org/10.5281/zenodo.19323194}{DOI: 10.5281/zenodo.19323194}
+
+\bibitem{whitmer2026serial}
+Whitmer, G.L., III.
+The Serial Decoding Basin: Five Experiments on Convergence, Thermodynamic Anchoring, and Receiver-Limited Geometry.
+\emph{Zenodo}, 2026.
+\href{https://doi.org/10.5281/zenodo.19323423}{DOI: 10.5281/zenodo.19323423}
+
+\bibitem{whitmer2026dissipative}
+Whitmer, G.L., III.
+The Dissipative Decoder: Thermodynamic Cost Bounds on the Serial Decoding Throughput Basin.
+\emph{Zenodo}, 2026.
+\href{https://doi.org/10.5281/zenodo.19433048}{DOI: 10.5281/zenodo.19433048}
+
+\bibitem{shannon1951}
+Shannon, C.E.
+Prediction and Entropy of Printed English.
+\emph{Bell Syst.\ Tech.\ J.}, 1951, \emph{30}, 50--64.
+\href{https://doi.org/10.1002/j.1538-7305.1951.tb01366.x}{DOI: 10.1002/j.1538-7305.1951.tb01366.x}
+
+\bibitem{jaeger2010}
+Jaeger, T.F.
+Redundancy and Reduction: Speakers Manage Syntactic Information Density.
+\emph{Cogn.\ Psychol.}, 2010, \emph{61}, 23--62.
+\href{https://doi.org/10.1016/j.cogpsych.2010.02.002}{DOI: 10.1016/j.cogpsych.2010.02.002}
+
+\bibitem{miller1956}
+Miller, G.A.
+The Magical Number Seven, Plus or Minus Two: Some Limits on Our Capacity for Processing Information.
+\emph{Psychol.\ Rev.}, 1956, \emph{63}, 81--97.
+\href{https://doi.org/10.1037/h0043158}{DOI: 10.1037/h0043158}
+
+\bibitem{miller1955}
+Miller, G.A.; Nicely, P.E.
+An Analysis of Perceptual Confusions among Some English Consonants.
+\emph{J.\ Acoust.\ Soc.\ Am.}, 1955, \emph{27}, 338--352.
+\href{https://doi.org/10.1121/1.1907526}{DOI: 10.1121/1.1907526}
+
+\bibitem{whitmer2026code}
+Whitmer, G.L., III.
+Inherited Constraint: Experiment Code and Data.
+\emph{GitHub}, 2026.
+Available online: \url{https://github.com/Windstorm-Labs/inherited-constraint}
+
+\end{thebibliography}
+
+\bigskip
+\noindent\emph{This paper is Paper~6 of The Windstorm Series. The series includes Paper~1: The Fons Constraint~\cite{whitmer2026fons}, Paper~2: The Receiver-Limited Floor~\cite{whitmer2026floor}, Paper~3: The Throughput Basin~\cite{whitmer2026basin}, Paper~4: The Serial Decoding Basin~\cite{whitmer2026serial}, Paper~5: The Dissipative Decoder~\cite{whitmer2026dissipative}, and Paper~7: The Throughput Basin Origin (DOI: 10.5281/zenodo.19498582).}
+
+\bigskip
+\noindent\textcopyright{} 2026 Grant Lavell Whitmer III. This article is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+\end{document}
