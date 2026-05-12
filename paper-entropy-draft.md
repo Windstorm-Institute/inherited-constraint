@@ -4,7 +4,7 @@
 
 Grant Lavell Whitmer III
 
-The Windstorm Institute, Fort Ann, NY 12827, USA; grantwhitmer3@gmail.com
+The Windstorm Institute, Fort Ann, NY 12827, USA; grant@windstorminstitute.org
 
 ---
 
