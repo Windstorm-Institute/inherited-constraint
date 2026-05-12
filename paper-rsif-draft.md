@@ -4,7 +4,7 @@ Grant Lavell Whitmer III
 
 The Windstorm Institute, Fort Ann, NY 12827, USA
 
-Email: grantwhitmer3@gmail.com
+Email: grant@windstorminstitute.org
 
 ORCID: 0009-0007-3224-755X
 
