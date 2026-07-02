@@ -10,7 +10,7 @@ ORCID: 0009-0007-3224-755X
 
 ---
 
-**Abstract:** Silicon AI has no thermodynamic throughput basin, yet language models converge on approximately 4.2 bits per token -- within the biological basin. This study tests whether AI inherits its throughput from training data produced by biologically constrained brains. Bits-per-token (BPT) was measured across seven corpora using four models on standardized hardware. Natural language produces BPT of approximately 3.90, coinciding with the ribosome (4.39 bits/codon) and basin centroid (4.16 +/- 0.19 bits). Destroying word order doubles per-token surprise to approximately 10.8 bits. A granular shuffling cascade localizes the dominant structure to sentence-internal word order (syntax), contributing approximately 3.3 bits. Zipf exponents are identical in original and shuffled English (alpha = -0.843), proving word-frequency statistics insufficient for the approximately 4.4-bit convergence. A four-link causal chain is proposed: physics constrains biology, biology constrains cognition, cognition constrains language, language constrains AI. Links 1--2 are established; Links 3--4 are supported by convergent evidence with falsifiable predictions offered.
+**Abstract:** Silicon AI has no thermodynamic throughput basin, yet language models converge on approximately 3.90 bits per token -- within the biological basin. This study tests whether AI inherits its throughput from training data produced by biologically constrained brains. Bits-per-token (BPT) was measured across seven corpora using four models on standardized hardware. Natural language produces BPT of approximately 3.90, near the low edge of the biological basin (centroid 4.16 +/- 0.19 bits) and within about 0.5 bits of the ribosome (4.39 bits/codon). Destroying word order doubles per-token surprise to approximately 10.8 bits. A granular shuffling cascade localizes the dominant structure to sentence-internal word order (syntax), contributing approximately 3.3 bits. Zipf exponents are identical in original and shuffled English (alpha = -0.843), proving word-frequency statistics insufficient for the approximately 3.90-bit convergence. A four-link causal chain is proposed: physics constrains biology, biology constrains cognition, cognition constrains language, language constrains AI. Links 1--2 are established; Links 3--4 are supported by convergent evidence with falsifiable predictions offered.
 
 **Keywords:** inherited information density; bits per token; shuffling cascade; syntactic structure; cognitive processing capacity; cross-substrate convergence
 
@@ -20,7 +20,7 @@ ORCID: 0009-0007-3224-755X
 
 Five companion papers established the throughput basin (3--6 bits per serial event) [1--5] and demonstrated that its thermodynamic basis constrains biology through pairwise discrimination cost (Regime A) while silicon AI escapes this constraint (Regime B, sub-linear cost) [5]. This creates a paradox: if the physics does not constrain silicon, why does silicon land in the same neighborhood as the ribosome?
 
-The hypothesis tested here is that AI inherits its throughput from the biological systems that generated its training data. Every language model was trained on human text. Human text was produced by human brains -- biological serial decoders constrained by the throughput basin. The information density of human language evolved to match the approximately 4--5 bit processing capacity of the biological systems that produce and receive it. When GPT-4 processes English at approximately 4.4 bits per token, it is learning a pattern that biological evolution burned into the structure of language over millions of years.
+The hypothesis tested here is that AI inherits its throughput from the biological systems that generated its training data. Every language model was trained on human text. Human text was produced by human brains -- biological serial decoders constrained by the throughput basin. The information density of human language evolved to match the approximately 4--5 bit processing capacity of the biological systems that produce and receive it. When GPT-4 processes English at approximately 3.90 bits per token, it is learning a pattern that biological evolution burned into the structure of language over millions of years.
 
 ## 2. Material and Methods
 
@@ -60,7 +60,7 @@ Structure was destroyed at successive levels to localize which level of linguist
 
 ### 2.6. Zipf Analysis
 
-The Zipf exponent (rank-frequency power law) was computed for both original and shuffled English to test whether word-frequency statistics alone explain the approximately 4.4-bit BPT.
+The Zipf exponent (rank-frequency power law) was computed for both original and shuffled English to test whether word-frequency statistics alone explain the approximately 3.90-bit BPT.
 
 ## 3. Results
 
@@ -108,7 +108,7 @@ Syntax -- sentence-internal word order -- is the dominant carrier of cognitive i
 
 ### 3.3. Zipf Is Insufficient
 
-Original English: alpha = -0.843, R^2 = 0.992. Shuffled English: alpha = -0.843, R^2 = 0.992. Identical. Exactly the same words at exactly the same frequencies. Yet original English yields approximately 11 bits of effective information per token while shuffled English yields approximately 5 bits. A 6-bit difference with identical word statistics proves that word-frequency statistics are necessary but not sufficient. Anyone who claims that the approximately 4.4-bit convergence is "just Zipf's law" is refuted by this single control.
+Original English: alpha = -0.843, R^2 = 0.992. Shuffled English: alpha = -0.843, R^2 = 0.992. Identical. Exactly the same words at exactly the same frequencies. Yet original English yields only approximately 3.90 bits of effective information per token while shuffled English yields approximately 11 bits. A structural gap of about 6.7 bits with identical word statistics proves that word-frequency statistics are necessary but not sufficient. Anyone who claims that the approximately 3.90-bit convergence is "just Zipf's law" is refuted by this single control.
 
 ### 3.4. Softmax Temperature and the Basin
 
@@ -116,7 +116,7 @@ The softmax temperature T controls the entropy of the model's output distributio
 
 ### 3.5. Cognitive Signature: Variance Not Just Mean
 
-DNA sequences produce BPT of 4.54 -- in the basin -- but DNA is non-cognitive. Code produces BPT of 2.80 -- outside the basin -- but code is cognitive. The distinction lies in the compressibility profile, not the mean BPT alone. Code is hyper-predictable (low BPT, low variance) because formal syntax constrains nearly every token. Natural language balances high-entropy novelty (new ideas, surprising word choices) with low-entropy structure (grammar, syntax), producing a characteristic phase transition between predictable and unpredictable tokens. DNA's basin membership likely reflects tokenizer artifacts (poor English-tokenizer fit to biological sequences) rather than genuine cognitive structure.
+DNA sequences produce BPT of 4.39 -- in the basin -- but DNA is non-cognitive. Code produces BPT of 2.47 -- outside the basin -- but code is cognitive. The distinction lies in the compressibility profile, not the mean BPT alone. Code is hyper-predictable (low BPT, low variance) because formal syntax constrains nearly every token. Natural language balances high-entropy novelty (new ideas, surprising word choices) with low-entropy structure (grammar, syntax), producing a characteristic phase transition between predictable and unpredictable tokens. DNA's basin membership likely reflects tokenizer artifacts (poor English-tokenizer fit to biological sequences) rather than genuine cognitive structure.
 
 ### 3.6. Energy Cost of Structure
 
@@ -130,15 +130,15 @@ A four-link causal chain is proposed:
 
 **Link 1 (Established): Physics constrains biology.** Thermodynamic cost minimization under pairwise discrimination constraints (Regime A) constrains biological decoders to 3--6 bits per event. Evidence: five companion papers [1--5].
 
-**Link 2 (Established): Biology constrains cognition.** Neural systems built from biological substrates inherit the throughput constraint. Working memory: approximately 3.1 bits per item. Phoneme discrimination: approximately 4.2 bits. Evidence: Miller [8], Miller and Nicely [9], decades of psychophysics.
+**Link 2 (Established): Biology constrains cognition.** Neural systems built from biological substrates inherit the throughput constraint. Working memory: approximately 3.1 bits per item. Phoneme discrimination: approximately 3.9 bits. Evidence: Miller [8], Miller and Nicely [9], decades of psychophysics.
 
-**Link 3 (Proposed): Cognition constrains language.** Language evolved as a communication channel between brains constrained to approximately 4--5 bits per event. Evidence: BPT ~ 4.4 (this paper), Shannon's 1951 estimate [6], the UID literature [7]. Not yet causally demonstrated.
+**Link 3 (Proposed): Cognition constrains language.** Language evolved as a communication channel between brains constrained to approximately 4--5 bits per event. Evidence: BPT ~ 3.90 (this paper), Shannon's 1951 estimate [6], the UID literature [7]. Not yet causally demonstrated.
 
-**Link 4 (Proposed): Language constrains AI.** Models trained on human language learn its statistical structure. The approximately 4.4-bit BPT reflects the information density that biological cognition selected for. Evidence: the shuffling experiment. Not yet tested with a synthetic-training control.
+**Link 4 (Proposed): Language constrains AI.** Models trained on human language learn its statistical structure. The approximately 3.90-bit BPT reflects the information density that biological cognition selected for. Evidence: the shuffling experiment. Not yet tested with a synthetic-training control.
 
 ### 4.2. Connection to Zipf's Law
 
-Zipf's law has been observed across all human languages since 1935, but no agreed-upon explanation exists. The throughput basin framework suggests a hypothesis: Zipf distributions may emerge when communication is optimized between agents constrained to approximately 4--5 bits per processing event. A power-law word-frequency distribution is the maximum-entropy distribution subject to a constraint on mean information per word -- and the biological throughput basin provides exactly such a constraint. This is stated as a hypothesis, not a derivation; a formal proof would require showing that the approximately 4--5 bit constraint mathematically necessitates a power-law exponent near alpha ~ 1. The identical Zipf exponents in original and shuffled English (Section 3.3) demonstrate that Zipf is a property of vocabulary usage, while the approximately 4.4-bit BPT is a property of structured text -- they are complementary, not competing, descriptions.
+Zipf's law has been observed across all human languages since 1935, but no agreed-upon explanation exists. The throughput basin framework suggests a hypothesis: Zipf distributions may emerge when communication is optimized between agents constrained to approximately 4--5 bits per processing event. A power-law word-frequency distribution is the maximum-entropy distribution subject to a constraint on mean information per word -- and the biological throughput basin provides exactly such a constraint. This is stated as a hypothesis, not a derivation; a formal proof would require showing that the approximately 4--5 bit constraint mathematically necessitates a power-law exponent near alpha ~ 1. The identical Zipf exponents in original and shuffled English (Section 3.3) demonstrate that Zipf is a property of vocabulary usage, while the approximately 3.90-bit BPT is a property of structured text -- they are complementary, not competing, descriptions.
 
 ### 4.3. Syntax as Cognitive Organizer
 
@@ -153,7 +153,7 @@ The granular shuffling cascade localizes the dominant structure to sentence-inte
 
 ### 4.5. The Bigger Picture
 
-The throughput basin constrains biology directly, through the physics of molecular discrimination. It constrains language indirectly, through the cognitive capacity of the brains that invented it. It constrains AI at one further remove, through the training data that carries language's biological fingerprint. The ribosome found this limit through 3.8 billion years of evolution. Human language found it through millions of years of cognitive optimization. AI learned it in a few months of training on the internet. Three timescales, three substrates, one neighborhood: approximately 4.4 bits. The fingerprint is everywhere -- the question is whether it reflects a deep constraint or a coincidence of training data distribution. The falsifiable predictions offered in this paper are designed to distinguish between these interpretations.
+The throughput basin constrains biology directly, through the physics of molecular discrimination. It constrains language indirectly, through the cognitive capacity of the brains that invented it. It constrains AI at one further remove, through the training data that carries language's biological fingerprint. The ribosome found this limit through 3.8 billion years of evolution. Human language found it through millions of years of cognitive optimization. AI learned it in a few months of training on the internet. Three timescales, three substrates, one neighborhood: approximately 4 bits (3.90 for language, 4.39 for the ribosome). The fingerprint is everywhere -- the question is whether it reflects a deep constraint or a coincidence of training data distribution. The falsifiable predictions offered in this paper are designed to distinguish between these interpretations.
 
 ### 4.6. Limitations
 

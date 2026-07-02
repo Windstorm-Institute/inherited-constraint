@@ -9,7 +9,7 @@
 
 The Dissipative Decoder proved that silicon AI has no thermodynamic throughput basin. Its energy scales sub-linearly with model capacity. No quadratic discrimination cost. No efficiency peak. No physical speed limit.
 
-And yet AI models converge on ~4.2 bits of effective information per token — right in the middle of the biological basin that they are supposedly exempt from.
+And yet AI models converge on ~3.90 bits of effective information per token — near the low edge of the biological basin that they are supposedly exempt from.
 
 This is the paradox. If the physics doesn't constrain silicon, why does silicon land in the same neighborhood as the ribosome?
 
@@ -19,27 +19,27 @@ AI inherits its throughput from the biological systems that generated its traini
 
 Every language model ever built was trained on human text. Human text was written by human brains. Human brains are biological serial decoders constrained by the throughput basin. The information density of human language — how surprising each word is, how predictable each sentence is — evolved to match the ~4–5 bit processing capacity of the biological systems that produce and receive it.
 
-When GPT-4 processes English at ~4.4 bits per token, it is not obeying a law of silicon physics. It is learning a pattern that biological evolution burned into the structure of language over millions of years.
+When GPT-4 processes English at ~3.90 bits per token, it is not obeying a law of silicon physics. It is learning a pattern that biological evolution burned into the structure of language over millions of years.
 
 ## The Experiment
 
 We measured bits-per-token (BPT) — the model's average surprise at each word — across seven types of data. Four models. Same hardware. Same methodology. We computed all BPT values *before* comparing them to the biological basin. If natural language had shown 2 bits or 9 bits, we would have reported that. This is a basin-blind design.
 
-It showed 4.4 bits.
+It showed 3.90 bits.
 
-The ribosome processes information at 4.39 bits per codon. Claude Shannon, in 1951, estimated the entropy of printed English at approximately 1 bit per character — roughly 5 bits per word. Three independent measurements, three different methods, three different decades, the same number.
+The ribosome processes information at 4.39 bits per codon. Claude Shannon, in 1951, estimated the entropy of printed English at approximately 1 bit per character — roughly 5 bits per word. Three independent measurements, three different methods, three different decades, the same neighborhood.
 
 ## The Seven Corpora
 
 | Corpus | Bits per Token | What It Tells Us |
 |--------|---------------|-----------------|
-| Natural language (English prose) | 4.4 | In the basin. Matches the ribosome. |
-| Programming code (Python) | 2.8 | Below the basin. More predictable than prose. |
-| DNA sequences | 4.5 | In the basin — but a tokenizer artifact. |
-| Synthetic structured data | 3.9 | In the basin — models exploit any pattern. |
-| Mathematical notation | 7.5 | Above the basin. Unfamiliar to the model. |
-| Random printable text | 8.5 | Far above. No patterns to exploit. |
-| Shuffled English (same words, random order) | 10.8 | Far above. Structure destroyed. |
+| Natural language (English prose) | 3.90 | In the basin (low edge). Near the ribosome (4.39). |
+| Programming code (Python) | 2.47 | Below the basin. More predictable than prose. |
+| DNA sequences | 4.39 | In the basin — but a tokenizer artifact. |
+| Synthetic structured data | 3.83 | In the basin — models exploit any pattern. |
+| Mathematical notation | 7.00 | Above the basin. Unfamiliar to the model. |
+| Random printable text | 8.27 | Far above. No patterns to exploit. |
+| Shuffled English (same words, random order) | 10.64 | Far above. Structure destroyed. |
 
 The most important row is the last one. Shuffled English uses the exact same words as regular English. Same vocabulary. Same word frequencies. Same Zipf distribution. But the grammar, syntax, and semantics have been destroyed — words appear in random order.
 
@@ -70,7 +70,7 @@ Shuffled English: α = −0.843, R² = 0.992.
 
 Identical. Exactly the same words at exactly the same frequencies. The Zipf distribution is preserved perfectly by shuffling.
 
-Yet original English gives ~11 bits of effective information per token while shuffled English gives ~5 bits. Same statistics, 6 bits of difference. Word frequencies are necessary (they set the base rate) but they are not sufficient (structure determines the rest). Anyone who claims that the ~4.4-bit convergence is "just Zipf's law" is refuted by this single control: Zipf is identical in both conditions, but information extraction is completely different.
+Yet shuffled English gives ~11 bits of effective information per token while original English gives only ~3.90 bits. Same statistics, ~6.7 bits of difference. Word frequencies are necessary (they set the base rate) but they are not sufficient (structure determines the rest). Anyone who claims that the ~3.90-bit convergence is "just Zipf's law" is refuted by this single control: Zipf is identical in both conditions, but information extraction is completely different.
 
 ## The Energy Cost of Grammar
 
@@ -88,9 +88,9 @@ We propose — and we emphasize "propose," because two of the four links are hyp
 
 **Link 2 (Established): Biology → Cognition.** Neural systems built from biological substrates inherit the throughput constraint. Working memory: ~3.1 bits per item. Phoneme discrimination: ~4.2 bits. Evidence: Miller (1956), Miller & Nicely (1955), decades of psychophysics.
 
-**Link 3 (Proposed): Cognition → Language.** Language evolved as a communication channel between brains constrained to ~4–5 bits per event. Speakers can only formulate ~4–5 bits of new information per utterance. Listeners can only decode ~4–5 bits per processing step. Language optimized to match. Evidence: BPT ≈ 4.4 (this paper), Shannon's 1951 estimate, the UID literature. *Not yet causally demonstrated.*
+**Link 3 (Proposed): Cognition → Language.** Language evolved as a communication channel between brains constrained to ~4–5 bits per event. Speakers can only formulate ~4–5 bits of new information per utterance. Listeners can only decode ~4–5 bits per processing step. Language optimized to match. Evidence: BPT ≈ 3.90 (this paper), Shannon's 1951 estimate, the UID literature. *Not yet causally demonstrated.*
 
-**Link 4 (Proposed): Language → AI.** Models trained on human language learn its statistical structure. The ~4.4-bit BPT reflects the information density that biological cognition selected for. Destroy the structure (shuffling) and BPT jumps to 10.8. Evidence: the shuffling experiment. *Not yet tested with a synthetic-training control.*
+**Link 4 (Proposed): Language → AI.** Models trained on human language learn its statistical structure. The ~3.90-bit BPT reflects the information density that biological cognition selected for. Destroy the structure (shuffling) and BPT jumps to 10.8. Evidence: the shuffling experiment. *Not yet tested with a synthetic-training control.*
 
 ## What Would Falsify This
 
@@ -110,7 +110,7 @@ These predictions are offered openly and without hedging. If any of them fails, 
 
 The throughput basin constrains biology directly, through the physics of molecular discrimination. It constrains language indirectly, through the cognitive capacity of the brains that invented it. It constrains AI at one further remove, through the training data that carries language's biological fingerprint.
 
-The ribosome found this limit through 3.8 billion years of evolution. Human language found it through millions of years of cognitive optimization. AI learned it in a few months of training on the internet. Three timescales, three substrates, one neighborhood: ~4.4 bits.
+The ribosome found this limit through 3.8 billion years of evolution. Human language found it through millions of years of cognitive optimization. AI learned it in a few months of training on the internet. Three timescales, three substrates, one neighborhood: ~4 bits (3.90 for language, 4.39 for the ribosome).
 
 The fingerprint is everywhere. You just have to know what to look for.
 
