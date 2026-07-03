@@ -108,7 +108,7 @@ Syntax -- sentence-internal word order -- is the dominant carrier of cognitive i
 
 ### 3.3. Zipf Is Insufficient
 
-Original English: alpha = -0.843, R^2 = 0.992. Shuffled English: alpha = -0.843, R^2 = 0.992. Identical. Exactly the same words at exactly the same frequencies. Yet original English yields approximately 11 bits of effective information per token while shuffled English yields approximately 5 bits. A 6-bit difference with identical word statistics proves that word-frequency statistics are necessary but not sufficient. Anyone who claims that the approximately 4.4-bit convergence is "just Zipf's law" is refuted by this single control.
+Original English: alpha = -0.843, R^2 = 0.992. Shuffled English: alpha = -0.843, R^2 = 0.992. Identical. Exactly the same words at exactly the same frequencies. Yet original English yields only approximately 3.90 bits of effective information per token while shuffled English yields approximately 11 bits. A structural gap of about 6.7 bits with identical word statistics proves that word-frequency statistics are necessary but not sufficient. Anyone who claims that the approximately 3.90-bit convergence is "just Zipf's law" is refuted by this single control.
 
 ### 3.4. Softmax Temperature and the Basin
 

@@ -70,7 +70,7 @@ Shuffled English: α = −0.843, R² = 0.992.
 
 Identical. Exactly the same words at exactly the same frequencies. The Zipf distribution is preserved perfectly by shuffling.
 
-Yet original English gives ~11 bits of effective information per token while shuffled English gives ~5 bits. Same statistics, 6 bits of difference. Word frequencies are necessary (they set the base rate) but they are not sufficient (structure determines the rest). Anyone who claims that the ~4.4-bit convergence is "just Zipf's law" is refuted by this single control: Zipf is identical in both conditions, but information extraction is completely different.
+Yet shuffled English gives ~11 bits of effective information per token while original English gives only ~3.90 bits. Same statistics, ~6.7 bits of difference. Word frequencies are necessary (they set the base rate) but they are not sufficient (structure determines the rest). Anyone who claims that the ~3.90-bit convergence is "just Zipf's law" is refuted by this single control: Zipf is identical in both conditions, but information extraction is completely different.
 
 ## The Energy Cost of Grammar
 
