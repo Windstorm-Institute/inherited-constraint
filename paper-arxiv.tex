@@ -1,28 +1,14 @@
-% Paper 6 of 7 in The Windstorm Series
-\documentclass[12pt,a4paper]{article}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{natbib}
-\usepackage{booktabs}
-\usepackage[margin=1in]{geometry}
-
+\documentclass[11pt]{article}
+\usepackage{wsi-style}
+\wsirunhead{The Inherited Constraint}
 \title{Biological Throughput Limits Shape the Information Structure of Human Language and Artificial Intelligence}
-
-\author{Grant Lavell Whitmer III\\
-The Windstorm Institute\\
-Fort Ann, NY 12827, USA\\
-\texttt{grant@windstorminstitute.org}}
-
+\author{Grant Whitmer}
 \date{March 2026}
-
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Silicon AI has no thermodynamic throughput basin, yet language models converge on approximately 3.90 bits per token---within the biological basin. This study tests whether AI inherits its throughput from training data produced by biologically constrained brains. Bits-per-token (BPT) was measured across seven corpora using four models (Pythia-70m, Pythia-410m, GPT-2, GPT-2-large) on standardized hardware. Natural language produces BPT of approximately 3.90, near the low edge of the biological basin (centroid $4.16 \pm 0.19$ bits) and within about 0.5 bits of the ribosome (4.39 bits/codon). Destroying word order doubles per-token surprise to approximately 10.8 bits. A granular shuffling cascade localizes the dominant structure to sentence-internal word order (syntax), contributing approximately 3.3 bits---exceeding discourse (1.3 bits) and sentence ordering (0.6 bits) combined. Zipf exponents are identical in original and shuffled English ($\alpha = -0.843$), proving word-frequency statistics insufficient for the approximately 4.4-bit convergence. Structured text costs 20\% more energy per token than shuffled text. A four-link causal chain is proposed: physics constrains biology, biology constrains cognition, cognition constrains language, language constrains AI. Links~1--2 are established; Links~3--4 are supported by convergent evidence with four falsifiable predictions offered.
+Silicon AI has no thermodynamic throughput basin, yet language models converge on approximately 3.90 bits per token---within the biological basin. This study tests whether AI inherits its throughput from training data produced by biologically constrained brains. Bits-per-token (BPT) was measured across seven corpora using four models (Pythia-70m, Pythia-410m, GPT-2, GPT-2-large) on standardized hardware. Natural language produces BPT of approximately 3.90, near the low edge of the biological basin (centroid $4.16 \pm 0.19$ bits) and within about 0.5 bits of the ribosome (4.39 bits/codon). Destroying word order more than doubles per-token surprise, to approximately 10.6 bits. A granular shuffling cascade localizes the dominant structure to sentence-internal word order (syntax), contributing approximately 3.3 bits---exceeding discourse (1.3 bits) and sentence ordering (0.6 bits) combined. Zipf exponents are identical in original and shuffled English ($\alpha = -0.843$), indicating that word-frequency statistics are insufficient to explain the approximately 3.90-bit convergence. Structured text costs 20\% more energy per token than shuffled text. A four-link causal chain is proposed: physics constrains biology, biology constrains cognition, cognition constrains language, language constrains AI. Links~1--2 are established; Links~3--4 are supported by convergent evidence with four falsifiable predictions offered.
 \end{abstract}
 
 \noindent\textbf{Keywords:} inherited information density; bits per token; shuffling cascade; syntactic structure; Zipf distribution; uniform information density; cognitive processing capacity; causal chain; cross-substrate convergence; energy cost
@@ -119,7 +105,7 @@ GPT-2-large & 774M & 3.47 & 10.29 & 6.82 \\
 
 Larger models achieve lower BPT on natural language (exploiting more structure) but show similar BPT on shuffled text (approximately 10.5 across all models), indicating that the structural bonus scales with model capacity while the base rate (word frequencies) is captured even by small models.
 
-Natural language (BPT $\sim 3.90$) falls inside the throughput basin. The ribosome processes information at 4.39 bits per codon. Claude Shannon, in 1951, estimated the entropy of printed English at approximately 1 bit per character---roughly 5 bits per word~\cite{shannon1951}. Three independent measurements, three different methods, three different decades, the same neighborhood.
+Natural language (BPT $\sim 3.90$) falls inside the throughput basin. The ribosome processes information at 4.39 bits per codon. Claude Shannon, in 1951, estimated the entropy of printed English at approximately 1 bit per character---roughly 5 bits per word~\cite{shannon1951}. Three independent measurements across different methods and decades land in a comparable range (roughly 4--5 bits per unit), though the units---bits per token, per codon, and per word---are not directly commensurable.
 
 The structural bonus ($\Delta_{\mathrm{BPT}}$) is 6.28--6.82 across models (mean 6.74 bits; paired $t$-test: $t(3) = 27.4$, $p < 0.001$). Destroying word order more than doubles per-token surprise.
 
@@ -145,7 +131,7 @@ Syntax---sentence-internal word order---is the dominant carrier of cognitive inf
 
 \subsection{Zipf Is Insufficient}
 
-Original English: $\alpha = -0.843$, $R^2 = 0.992$. Shuffled English: $\alpha = -0.843$, $R^2 = 0.992$. Identical. Exactly the same words at exactly the same frequencies. Yet original English yields only approximately 3.90 bits of effective information per token while shuffled English yields approximately 11 bits. A structural gap of about 6.7 bits with identical word statistics proves that word-frequency statistics are necessary but not sufficient. Anyone who claims that the approximately 3.90-bit convergence is ``just Zipf's law'' is refuted by this single control.
+Original English: $\alpha = -0.843$, $R^2 = 0.992$. Shuffled English: $\alpha = -0.843$, $R^2 = 0.992$. Identical. Exactly the same words at exactly the same frequencies. Yet original English yields only approximately 3.90 bits of effective information per token while shuffled English yields approximately 11 bits. A structural gap of about 6.7 bits with identical word statistics proves that word-frequency statistics are necessary but not sufficient. This single control shows that the approximately 3.90-bit convergence cannot be attributed to Zipf's law alone.
 
 \subsection{Softmax Temperature and the Basin}
 
@@ -184,7 +170,7 @@ The granular shuffling cascade localizes the dominant structure to sentence-inte
 \subsection{Falsifiable Predictions}
 
 \begin{enumerate}
-\item \textbf{Cross-linguistic universality:} Shuffled non-English text (Chinese, Arabic, Finnish) should produce BPT of approximately 5 bits ($\pm 1$ for vocabulary effects). Falsification: shuffled Pirah\~a produces BPT outside 3--7 bits.
+\item \textbf{Cross-linguistic universality:} Natural (unshuffled) non-English text (Chinese, Arabic, Finnish) should produce BPT of approximately 5 bits ($\pm 1$ for vocabulary effects), with shuffling raising BPT well above the basin as in English. Falsification: natural (unshuffled) Pirah\~a produces BPT outside 3--7 bits, or shuffling fails to raise BPT above the basin.
 \item \textbf{Synthetic training baseline:} A model trained exclusively on non-biological data (synthetic patterns, mathematical proofs) should show BPT outside 3--6 bits. Falsification: synthetic-trained model shows BPT in 3--6 bits.
 \item \textbf{BPB convergence floor:} As models improve, BPB on English should approach but not drop far below approximately 0.5. Falsification: frontier models achieve BPB $< 0.3$ consistently.
 \item \textbf{Phonemic inventory correlation:} Languages with fewer phonemes should show steeper Zipf slopes. Falsification: no correlation exists.
@@ -204,7 +190,7 @@ The throughput basin constrains biology directly, through the physics of molecul
 
 \section{Conclusion}
 
-Human language produces approximately 3.90 bits of per-token surprise in a basin-blind measurement---near the low edge of the throughput basin (centroid $4.16 \pm 0.19$ bits), within about 0.5 bits of the ribosome (4.39 bits) and comparable to Shannon's 1951 estimate (approximately 5 bits per word). Destroying syntax doubles per-token surprise to approximately 10.8 bits; syntax keeps language in the basin. The granular shuffling cascade identifies sentence-internal word order as the dominant structural carrier (approximately 3.3 bits). The Zipf distribution is identical in original and shuffled text yet information extraction differs by approximately 6 bits, proving that word statistics are necessary but insufficient. A four-link causal chain---physics to biology to cognition to language to AI---is proposed, with Links~1--2 empirically established and Links~3--4 supported by convergent evidence but not yet causally demonstrated. Two falsifiable predictions would confirm or refute the inherited constraint hypothesis. Until tested, it remains a hypothesis consistent with available data and a research program for future investigation.
+Human language produces approximately 3.90 bits of per-token surprise in a basin-blind measurement---near the low edge of the throughput basin (centroid $4.16 \pm 0.19$ bits), within about 0.5 bits of the ribosome (4.39 bits) and comparable to Shannon's 1951 estimate (approximately 5 bits per word). Destroying syntax more than doubles per-token surprise, to approximately 10.6 bits; syntax keeps language in the basin. The granular shuffling cascade identifies sentence-internal word order as the dominant structural carrier (approximately 3.3 bits). The Zipf distribution is identical in original and shuffled text yet information extraction differs by approximately 6 bits, proving that word statistics are necessary but insufficient. A four-link causal chain---physics to biology to cognition to language to AI---is proposed, with Links~1--2 empirically established and Links~3--4 supported by convergent evidence but not yet causally demonstrated. Four falsifiable predictions would help confirm or refute the inherited constraint hypothesis. Until tested, it remains a hypothesis consistent with available data and a research program for future investigation.
 
 \subsection*{Author Contributions}
 
@@ -226,37 +212,40 @@ All experiments were performed with the assistance of Claude (Anthropic), an AI 
 
 The author declares no conflict of interest.
 
+\subsection*{Data, Code \& Resources}
+\noindent Manuscript source and archived record: \url{https://github.com/Windstorm-Institute/inherited-constraint} (Zenodo: \href{https://doi.org/10.5281/zenodo.19432910}{10.5281/zenodo.19432910}). Experiments, datasets, and analysis code: \url{https://github.com/Windstorm-Labs/inherited-constraint}. Windstorm Institute: \url{https://windstorminstitute.org}. Windstorm Labs: \url{https://windstormlabs.com}.
+
 \begin{thebibliography}{99}
 
 \bibitem{whitmer2026fons}
 Whitmer, G.L., III.
 The Fons Constraint: Information-Theoretic Convergence on Encoding Depth in Self-Replicating Systems.
 \emph{Zenodo}, 2026.
-\href{https://doi.org/10.5281/zenodo.19274048}{DOI: 10.5281/zenodo.19274048}
+\href{https://doi.org/10.5281/zenodo.19274047}{DOI: 10.5281/zenodo.19274047}
 
 \bibitem{whitmer2026floor}
 Whitmer, G.L., III.
 The Receiver-Limited Floor: Rate-Distortion Bounds on Serial Decoding Throughput.
 \emph{Zenodo}, 2026.
-\href{https://doi.org/10.5281/zenodo.19322973}{DOI: 10.5281/zenodo.19322973}
+\href{https://doi.org/10.5281/zenodo.19322972}{DOI: 10.5281/zenodo.19322972}
 
 \bibitem{whitmer2026basin}
 Whitmer, G.L., III.
 The Throughput Basin: Cross-Substrate Convergence and Decomposition of Serial Decoding Throughput.
 \emph{Zenodo}, 2026.
-\href{https://doi.org/10.5281/zenodo.19323194}{DOI: 10.5281/zenodo.19323194}
+\href{https://doi.org/10.5281/zenodo.19323193}{DOI: 10.5281/zenodo.19323193}
 
 \bibitem{whitmer2026serial}
 Whitmer, G.L., III.
 The Serial Decoding Basin: Five Experiments on Convergence, Thermodynamic Anchoring, and Receiver-Limited Geometry.
 \emph{Zenodo}, 2026.
-\href{https://doi.org/10.5281/zenodo.19323423}{DOI: 10.5281/zenodo.19323423}
+\href{https://doi.org/10.5281/zenodo.19323422}{DOI: 10.5281/zenodo.19323422}
 
 \bibitem{whitmer2026dissipative}
 Whitmer, G.L., III.
 The Dissipative Decoder: Thermodynamic Cost Bounds on the Serial Decoding Throughput Basin.
 \emph{Zenodo}, 2026.
-\href{https://doi.org/10.5281/zenodo.19433048}{DOI: 10.5281/zenodo.19433048}
+\href{https://doi.org/10.5281/zenodo.19432785}{DOI: 10.5281/zenodo.19432785}
 
 \bibitem{shannon1951}
 Shannon, C.E.
@@ -291,9 +280,9 @@ Available online: \url{https://github.com/Windstorm-Labs/inherited-constraint}
 \end{thebibliography}
 
 \bigskip
-\noindent\emph{This paper is Paper~6 of The Windstorm Series. The series includes Paper~1: The Fons Constraint~\cite{whitmer2026fons}, Paper~2: The Receiver-Limited Floor~\cite{whitmer2026floor}, Paper~3: The Throughput Basin~\cite{whitmer2026basin}, Paper~4: The Serial Decoding Basin~\cite{whitmer2026serial}, Paper~5: The Dissipative Decoder~\cite{whitmer2026dissipative}, and Paper~7: The Throughput Basin Origin (DOI: 10.5281/zenodo.19498582).}
+\noindent\emph{This is Paper~6 of The Windstorm Series. The series includes Paper~1: The Fons Constraint~\cite{whitmer2026fons}, Paper~2: The Receiver-Limited Floor~\cite{whitmer2026floor}, Paper~3: The Throughput Basin~\cite{whitmer2026basin}, Paper~4: The Serial Decoding Basin~\cite{whitmer2026serial}, Paper~5: The Dissipative Decoder~\cite{whitmer2026dissipative}, and Paper~7: The Throughput Basin Origin (DOI: 10.5281/zenodo.19498582).}
 
 \bigskip
-\noindent\textcopyright{} 2026 Grant Lavell Whitmer III. This article is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0).
+\noindent\textcopyright{} 2026 Grant Whitmer. This article is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0).
 
 \end{document}
