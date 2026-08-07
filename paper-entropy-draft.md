@@ -179,11 +179,11 @@ Human language produces approximately 3.90 bits of per-token surprise in a basin
 
 ## References
 
-1. Whitmer, G.L., III. The Fons Constraint: Information-Theoretic Convergence on Encoding Depth in Self-Replicating Systems. *Zenodo* **2026**. DOI: 10.5281/zenodo.19274048
-2. Whitmer, G.L., III. The Receiver-Limited Floor: Rate-Distortion Bounds on Serial Decoding Throughput. *Zenodo* **2026**. DOI: 10.5281/zenodo.19322973
-3. Whitmer, G.L., III. The Throughput Basin: Cross-Substrate Convergence and Decomposition of Serial Decoding Throughput. *Zenodo* **2026**. DOI: 10.5281/zenodo.19323194
-4. Whitmer, G.L., III. The Serial Decoding Basin: Five Experiments on Convergence, Thermodynamic Anchoring, and Receiver-Limited Geometry. *Zenodo* **2026**. DOI: 10.5281/zenodo.19323423
-5. Whitmer, G.L., III. The Dissipative Decoder: Thermodynamic Cost Bounds on the Serial Decoding Throughput Basin. *Zenodo* **2026**. DOI: 10.5281/zenodo.19433048
+1. Whitmer, G.L., III. The Fons Constraint: Information-Theoretic Convergence on Encoding Depth in Self-Replicating Systems. *Zenodo* **2026**. DOI: 10.5281/zenodo.19274047
+2. Whitmer, G.L., III. The Receiver-Limited Floor: Rate-Distortion Bounds on Serial Decoding Throughput. *Zenodo* **2026**. DOI: 10.5281/zenodo.19322972
+3. Whitmer, G.L., III. The Throughput Basin: Cross-Substrate Convergence and Decomposition of Serial Decoding Throughput. *Zenodo* **2026**. DOI: 10.5281/zenodo.19323193
+4. Whitmer, G.L., III. The Serial Decoding Basin: Five Experiments on Convergence, Thermodynamic Anchoring, and Receiver-Limited Geometry. *Zenodo* **2026**. DOI: 10.5281/zenodo.19323422
+5. Whitmer, G.L., III. The Dissipative Decoder: Thermodynamic Cost Bounds on the Serial Decoding Throughput Basin. *Zenodo* **2026**. DOI: 10.5281/zenodo.19432785
 6. Shannon, C.E. Prediction and Entropy of Printed English. *Bell Syst. Tech. J.* **1951**, *30*, 50--64. DOI: 10.1002/j.1538-7305.1951.tb01366.x
 7. Jaeger, T.F. Redundancy and Reduction: Speakers Manage Syntactic Information Density. *Cogn. Psychol.* **2010**, *61*, 23--62. DOI: 10.1016/j.cogpsych.2010.02.002
 8. Miller, G.A. The Magical Number Seven, Plus or Minus Two: Some Limits on Our Capacity for Processing Information. *Psychol. Rev.* **1956**, *63*, 81--97. DOI: 10.1037/h0043158

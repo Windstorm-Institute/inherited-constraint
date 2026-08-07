@@ -193,15 +193,15 @@ All experiments were performed with the assistance of Claude (Anthropic), an AI 
 
 ## References
 
-[1] Whitmer GL III. The Fons Constraint: Information-Theoretic Convergence on Encoding Depth in Self-Replicating Systems. Zenodo. 2026. DOI: 10.5281/zenodo.19274048
+[1] Whitmer GL III. The Fons Constraint: Information-Theoretic Convergence on Encoding Depth in Self-Replicating Systems. Zenodo. 2026. DOI: 10.5281/zenodo.19274047
 
-[2] Whitmer GL III. The Receiver-Limited Floor: Rate-Distortion Bounds on Serial Decoding Throughput. Zenodo. 2026. DOI: 10.5281/zenodo.19322973
+[2] Whitmer GL III. The Receiver-Limited Floor: Rate-Distortion Bounds on Serial Decoding Throughput. Zenodo. 2026. DOI: 10.5281/zenodo.19322972
 
-[3] Whitmer GL III. The Throughput Basin: Cross-Substrate Convergence and Decomposition of Serial Decoding Throughput. Zenodo. 2026. DOI: 10.5281/zenodo.19323194
+[3] Whitmer GL III. The Throughput Basin: Cross-Substrate Convergence and Decomposition of Serial Decoding Throughput. Zenodo. 2026. DOI: 10.5281/zenodo.19323193
 
-[4] Whitmer GL III. The Serial Decoding Basin: Five Experiments on Convergence, Thermodynamic Anchoring, and Receiver-Limited Geometry. Zenodo. 2026. DOI: 10.5281/zenodo.19323423
+[4] Whitmer GL III. The Serial Decoding Basin: Five Experiments on Convergence, Thermodynamic Anchoring, and Receiver-Limited Geometry. Zenodo. 2026. DOI: 10.5281/zenodo.19323422
 
-[5] Whitmer GL III. The Dissipative Decoder: Thermodynamic Cost Bounds on the Serial Decoding Throughput Basin. Zenodo. 2026. DOI: 10.5281/zenodo.19433048
+[5] Whitmer GL III. The Dissipative Decoder: Thermodynamic Cost Bounds on the Serial Decoding Throughput Basin. Zenodo. 2026. DOI: 10.5281/zenodo.19432785
 
 [6] Shannon CE. Prediction and Entropy of Printed English. Bell Syst Tech J. 1951;30:50-64. DOI: 10.1002/j.1538-7305.1951.tb01366.x
 
